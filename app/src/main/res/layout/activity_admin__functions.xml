@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_admin__functions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.yashbohara.project.Admin_Functions">
+
+    <Button
+        android:text="Register Student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:id="@+id/button7"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="RegisterStudent_Clicked" />
+
+    <Button
+        android:text="Register Student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:id="@+id/button6"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="RegisterStudent_Clicked" />
+
+    <Button
+        android:text="Register Student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:id="@+id/button5"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="RegisterStudent_Clicked" />
+
+    <Button
+        android:text="Register Student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:id="@+id/b41"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="RegisterStudent_Clicked" />
+
+    <Button
+        android:text="View Student Record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:id="@+id/b43"
+        android:layout_below="@+id/b42"
+        android:layout_alignLeft="@+id/b42"
+        android:layout_alignStart="@+id/b42"
+        android:onClick="ViewStudentRecord_Clicked" />
+
+    <Button
+        android:text="Upload Notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b44"
+        android:layout_below="@+id/b43"
+        android:layout_alignLeft="@+id/b43"
+        android:layout_alignStart="@+id/b43"
+        android:layout_marginTop="58dp"
+        android:onClick="UploadNotice_Clicked" />
+
+    <Button
+        android:text="Register Faculty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:id="@+id/b42"
+        android:layout_below="@+id/button7"
+        android:layout_alignRight="@+id/button7"
+        android:layout_alignEnd="@+id/button7"
+        android:onClick="RegisterFaculty_Clicked" />
+
+    <Button
+        android:text="Register Student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:id="@+id/button9"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="RegisterStudent_Clicked" />
+
+    <Button
+        android:text="Register Student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button8"
+        android:onClick="RegisterStudent_Clicked"
+        android:layout_alignBaseline="@+id/button7"
+        android:layout_alignBottom="@+id/button7"
+        android:layout_alignLeft="@+id/button7"
+        android:layout_alignStart="@+id/button7" />
+</RelativeLayout>
