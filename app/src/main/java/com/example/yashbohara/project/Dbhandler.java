@@ -230,7 +230,7 @@ public ArrayList<String> databaseToString(String Branch,String Section,String Se
     }
     public String RetrieveStudent(String Semester,String Branch,String Section,String RollNo)
     {
-        String b="";
+        String ba="";
         SQLiteDatabase db = getWritableDatabase();
         String q2="SELECT * FROM "+Branch+Section+Semester+" WHERE EnrollmentNumber='"+RollNo+"';";
         Cursor cursor=db.rawQuery(q2,null);
@@ -239,10 +239,10 @@ public ArrayList<String> databaseToString(String Branch,String Section,String Se
         {
             if(cursor.getString(cursor.getColumnIndex("EnrollmentNumber"))!=null)
             {
-                b=cursor.getString(cursor.getColumnIndex("Name"));
+                ba=cursor.getString(cursor.getColumnIndex("Name"));
             }
             cursor.moveToNext();
         }
-    return b;
+    return ba;
     }
 }
