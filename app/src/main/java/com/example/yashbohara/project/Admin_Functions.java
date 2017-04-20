@@ -27,4 +27,11 @@ public class Admin_Functions extends AppCompatActivity {
         Intent intent=new Intent(this,StudentRecord.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(this,M1.class);
+        startActivity(intent);
+
+    }
 }

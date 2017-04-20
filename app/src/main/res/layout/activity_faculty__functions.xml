@@ -41,4 +41,14 @@
         android:onClick="TakeAttendance_Clicked"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="View ClassReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:id="@+id/b94"
+        android:onClick="ViewClassReport_Clicked" />
 </RelativeLayout>

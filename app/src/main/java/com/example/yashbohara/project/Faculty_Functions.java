@@ -20,10 +20,22 @@ public class Faculty_Functions extends AppCompatActivity {
     }
     public void ViewStudentRecord_Clicked(View view)
     {
-
+        Intent intent=new Intent(this,StudentRecord.class);
+        startActivity(intent);
     }
     public void UploadAssignment_Clicked(View view)
     {
+
+    }
+    public void ViewClassReport_Clicked(View view)
+    {
+        Intent intent=new Intent(this,ViewClassReport.class);
+        startActivity(intent);
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(this,M1.class);
+        startActivity(intent);
 
     }
 }

@@ -30,4 +30,10 @@ public class M1 extends AppCompatActivity {
         Intent intent3=new Intent(this,Student_Login.class);
         startActivity(intent3);
     }
+
+        @Override
+        public void onBackPressed() {
+            Intent intent=new Intent(this,M1.class);
+            startActivity(intent);
+    }
 }

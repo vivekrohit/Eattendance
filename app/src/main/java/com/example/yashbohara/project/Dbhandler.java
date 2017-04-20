@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.health.PackageHealthStats;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -14,7 +15,7 @@ public class Dbhandler extends SQLiteOpenHelper {
     public static final String ContactNumber="ContactNumber";
     public static final String EnrollmentNumber="EnrollmentNumber";
     public static String branch;
-    public static final String DatabaseName="ddddd.db";
+    public static final String DatabaseName="dddddd.db";
     public static final int DatabaseVersion =1;
     public Dbhandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DatabaseName, factory, DatabaseVersion);
@@ -111,11 +112,11 @@ public class Dbhandler extends SQLiteOpenHelper {
         values.put("Name",Name);
         values.put("ContactNumber",11);
         values.put("EnrollmentNumber",EnrollmentNumber);
-        values.put("CS601",1);
-        values.put("CS602",1);
-        values.put("CS603",1);
-        values.put("CS604",1);
-        values.put("CS605",1);
+        values.put(branch+semester+"01",0);
+        values.put(branch+semester+"02",0);
+        values.put(branch+semester+"03",0);
+        values.put(branch+semester+"04",0);
+        values.put(branch+semester+"05",0);
         //String q1="INSERT INTO "+branch+section+semester+" WHERE VALUES ("+Name +" , " + " 0, "+EnrollmentNumber + ", 0 " + " ,0 " + " ,0 " + " ,0 " + " ,0 "+" );";
 db.insert(branch+section+semester,null,values);
         db.close();
@@ -155,30 +156,31 @@ public String RetrieveFaculty(String id)
     return op;
 
 }
-/*public int Retrieve(String  branch ,String section ,int  semester , String EnrollmentNumber,String SubjectCode)
+public String Extract(String  branch ,String section ,String semester , String EnrollmentNumber,String SubjectCode)
 {
+    String Result="0";
     SQLiteDatabase db=getWritableDatabase();
-    String q3="SELECT "+ SubjectCode+" FROM "+ branch+section+semester+" WHERE EnrollmentNumber ="+EnrollmentNumber+" ;";
-    int Result=0;
+    String q3="SELECT "+ SubjectCode+" FROM "+ branch+section+semester+" WHERE EnrollmentNumber ='"+EnrollmentNumber+"';";
     Cursor cursor=db.rawQuery(q3,null);
     cursor.moveToFirst();
     while (!cursor.isAfterLast())
     {
         if (cursor.getString(cursor.getColumnIndex(SubjectCode))!=null)
         {
-            Result=cursor.getInt(cursor.getColumnIndex(SubjectCode));
+            Result=cursor.getString(cursor.getColumnIndex(SubjectCode));
         }
         cursor.moveToNext();
     }
+    Log.e("hello",Result);
     db.close();
     return Result;
-}*/
+}
 
 public ArrayList<String> databaseToString(String Branch,String Section,String Semester)
 {
     ArrayList<String> dbString=new ArrayList<String>();
     SQLiteDatabase db=getWritableDatabase();
-    String query="SELECT * FROM " + Branch+Section+Semester + " WHERE 1";
+    String query="SELECT * FROM " + Branch+Section+Semester + ";";
     Cursor c=db.rawQuery(query,null);
     c.moveToFirst();
 
@@ -186,12 +188,61 @@ public ArrayList<String> databaseToString(String Branch,String Section,String Se
     {
         if (c.getString(c.getColumnIndex("EnrollmentNumber"))!=null)
         {
-            dbString.add(c.getString(c.getColumnIndex("EnrollmentNumber                                                                                                                                                                                                                                                          .")));
-
+            dbString.add(c.getString(c.getColumnIndex("EnrollmentNumber")));
         }
         c.moveToNext();
     }
     db.close();
     return dbString;
 }
+    public int Retrieve(String Branch, String Section, String Semester, String Code, String checkbox) {
+        int result=0;
+        SQLiteDatabase db = getWritableDatabase();
+        String q = "SELECT " + Branch+Semester+Code + " FROM " + Branch + Section + Semester + " WHERE EnrollmentNumber='" + checkbox + "'";
+        Cursor cursor = db.rawQuery(q, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            if (cursor.getString(cursor.getColumnIndex(Branch+Semester+Code)) != null) {
+                result = cursor.getInt(cursor.getColumnIndex(Branch+Semester+Code));
+            }
+            cursor.moveToNext();
+        }
+        Log.e("result", String.valueOf(result));
+        return result;
+    }
+    public void Update(String Branch, String Section, String Semester, String Code, String checkbox) {
+        int a;
+        a=Retrieve(Branch,Section,Semester,Code,checkbox);
+        a++;
+        Log.e("a", String.valueOf(a));
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("UPDATE " + Branch+Section+Semester + " SET "+Branch+Semester+Code+" ='"+a+"' WHERE EnrollmentNumber='"+checkbox+"';");
+
+    }
+    public void Update2(String Branch, String Section, String Semester, String Code, String checkbox) {
+        int a;
+        a=Retrieve(Branch,Section,Semester,Code,checkbox);
+        a--;
+        Log.e("a", String.valueOf(a));
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("UPDATE " + Branch+Section+Semester + " SET "+Branch+Semester+Code+" ='"+a+"' WHERE EnrollmentNumber='"+checkbox+"';");
+
+    }
+    public String RetrieveStudent(String Semester,String Branch,String Section,String RollNo)
+    {
+        String b="";
+        SQLiteDatabase db = getWritableDatabase();
+        String q2="SELECT * FROM "+Branch+Section+Semester+" WHERE EnrollmentNumber='"+RollNo+"';";
+        Cursor cursor=db.rawQuery(q2,null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast())
+        {
+            if(cursor.getString(cursor.getColumnIndex("EnrollmentNumber"))!=null)
+            {
+                b=cursor.getString(cursor.getColumnIndex("Name"));
+            }
+            cursor.moveToNext();
+        }
+    return b;
+    }
 }

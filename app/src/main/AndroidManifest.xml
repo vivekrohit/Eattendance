@@ -30,7 +30,8 @@
         <activity android:name=".StudentDetails" />
         <activity android:name=".Faculty_Functions" />
         <activity android:name=".TakeAttendance" />
-        <activity android:name=".AttendanceList"></activity>
+        <activity android:name=".AttendanceList" />
+        <activity android:name=".ViewClassReport"></activity>
     </application>
 
 </manifest>
