@@ -12,28 +12,6 @@
     tools:context="com.example.yashbohara.project.Faculty_Login"
     android:background="@android:color/background_light">
 
-    <Button
-        android:text="Register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/b42"
-        android:onClick="RegisterFaculty_Clicked"
-        android:background="@android:color/transparent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/b31"
-        android:layout_alignStart="@+id/b31" />
-
-    <Button
-        android:text="Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="29dp"
-        android:id="@+id/b31"
-        android:onClick="Login_Clicked"
-        android:background="@android:color/background_light"
-        android:layout_above="@+id/b42"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:text="Password"
         android:layout_width="wrap_content"
@@ -85,5 +63,27 @@
         android:id="@+id/imageButton5"
         android:background="@android:color/background_light"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b42"
+        android:onClick="RegisterFaculty_Clicked"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/b31"
+        android:layout_alignStart="@+id/b31" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/b31"
+        android:onClick="Login_Clicked"
+        android:background="@android:color/background_light"
+        android:layout_above="@+id/b42"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
