@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.yashbohara.project.TakeAttendance">
+    tools:context="com.example.yashbohara.project.TakeAttendance"
+    android:background="@android:color/background_light">
 
     <TextView
         android:text="Section"
@@ -18,29 +19,8 @@
         android:layout_alignLeft="@+id/t101"
         android:layout_alignStart="@+id/t101"
         android:layout_marginTop="89dp"
-        android:id="@+id/t102" />
-
-    <TextView
-        android:text="Semester"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/t102"
-        android:layout_alignLeft="@+id/t102"
-        android:layout_alignStart="@+id/t102"
-        android:layout_marginTop="111dp"
-        android:id="@+id/t103" />
-
-    <TextView
-        android:text="Branch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="19dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="58dp"
-        android:id="@+id/t101"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/t102"
+        android:textColor="@android:color/black" />
 
     <Spinner
         android:layout_width="200dp"
@@ -82,7 +62,8 @@
         android:layout_toEndOf="@+id/t103"
         android:layout_marginLeft="36dp"
         android:layout_marginStart="36dp"
-        android:onClick="TakeAttendance_Clicked" />
+        android:onClick="TakeAttendance_Clicked"
+        android:background="@android:color/transparent" />
 
     <TextView
         android:text="Subject Code"
@@ -91,7 +72,8 @@
         android:layout_centerVertical="true"
         android:layout_alignRight="@+id/t103"
         android:layout_alignEnd="@+id/t103"
-        android:id="@+id/t104" />
+        android:id="@+id/t104"
+        android:textColor="@android:color/black" />
 
     <Spinner
         android:layout_width="200dp"
@@ -101,5 +83,27 @@
         android:layout_alignStart="@+id/s102"
         android:id="@+id/s104"
         android:entries="@array/Code" />
+
+    <TextView
+        android:text="Branch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:id="@+id/t101"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Semester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:id="@+id/t103"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/t104"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

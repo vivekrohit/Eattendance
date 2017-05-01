@@ -46,7 +46,8 @@ public class StudentDetails extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent=new Intent(this,Faculty_Functions.class);
+        Intent intent=new Intent(this,M1.class);
         startActivity(intent);
+        this.finish();
     }
 }

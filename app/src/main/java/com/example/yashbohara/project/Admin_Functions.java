@@ -12,16 +12,8 @@ public class Admin_Functions extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin__functions);
     }
-    public void RegisterStudent_Clicked(View view)
-    {
-        Intent intent=new Intent(this,RegisterStudent.class);
-        startActivity(intent);
-    }
-    public void RegisterFaculty_Clicked(View view)
-    {
-        Intent intent=new Intent(this,RegisterFaculty.class);
-        startActivity(intent);
-    }
+
+
     public void ViewStudentRecord_Clicked(View view)
     {
         Intent intent=new Intent(this,StudentRecord.class);
@@ -32,6 +24,6 @@ public class Admin_Functions extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent=new Intent(this,M1.class);
         startActivity(intent);
-
+        this.finish();
     }
 }

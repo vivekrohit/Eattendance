@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_faculty__functions"
     android:layout_width="match_parent"
@@ -8,47 +9,68 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/background_light"
     tools:context="com.example.yashbohara.project.Faculty_Functions">
 
     <Button
         android:text="Upload Assignment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/b92"
-        android:layout_alignLeft="@+id/b92"
-        android:layout_alignStart="@+id/b92"
-        android:layout_marginTop="81dp"
         android:id="@+id/b93"
-        android:onClick="UploadAssignment_Clicked" />
+        android:onClick="UploadAssignment_Clicked"
+        android:layout_marginBottom="29dp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:textSize="18sp"
+        android:layout_above="@+id/b94"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="View Student Record"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="83dp"
         android:id="@+id/b92"
-        android:layout_below="@+id/b91"
-        android:layout_alignLeft="@+id/b91"
-        android:layout_alignStart="@+id/b91"
-        android:onClick="ViewStudentRecord_Clicked" />
+        android:onClick="ViewStudentRecord_Clicked"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:textSize="18sp"
+        android:layout_marginBottom="51dp"
+        android:layout_above="@+id/b93"
+        android:layout_alignLeft="@+id/b93"
+        android:layout_alignStart="@+id/b93" />
 
     <Button
         android:text="Take Attendance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
         android:id="@+id/b91"
         android:onClick="TakeAttendance_Clicked"
-        android:layout_alignParentTop="true"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:textSize="18sp"
+        android:layout_marginBottom="84dp"
+        android:layout_alignBottom="@+id/b92"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:text="View ClassReport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="22dp"
         android:id="@+id/b94"
-        android:onClick="ViewClassReport_Clicked" />
+        android:onClick="ViewClassReport_Clicked"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/b91"
+        android:layout_alignStart="@+id/b91" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/l"
+        android:id="@+id/imageButton3"
+        android:background="@android:color/background_light"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

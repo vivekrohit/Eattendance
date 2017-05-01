@@ -29,7 +29,7 @@ public class Faculty_Functions extends AppCompatActivity {
     }
     public void ViewClassReport_Clicked(View view)
     {
-        Intent intent=new Intent(this,ViewClassReport.class);
+        Intent intent=new Intent(this,FilterClass.class);
         startActivity(intent);
     }
     @Override

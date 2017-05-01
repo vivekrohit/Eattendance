@@ -33,7 +33,7 @@ public class M1 extends AppCompatActivity {
 
         @Override
         public void onBackPressed() {
-            Intent intent=new Intent(this,M1.class);
-            startActivity(intent);
+            this.finish();
+
     }
 }

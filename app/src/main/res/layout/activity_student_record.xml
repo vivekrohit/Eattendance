@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.yashbohara.project.StudentRecord">
+    tools:context="com.example.yashbohara.project.StudentRecord"
+    android:background="@android:color/background_light">
 
     <TextView
         android:text="Name"
@@ -20,7 +21,8 @@
         android:layout_marginLeft="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="72dp"
-        android:id="@+id/t81" />
+        android:id="@+id/t81"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:text="Semester"
@@ -30,7 +32,8 @@
         android:layout_alignLeft="@+id/t81"
         android:layout_alignStart="@+id/t81"
         android:layout_marginTop="60dp"
-        android:id="@+id/t82" />
+        android:id="@+id/t82"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:text="Branch"
@@ -39,19 +42,8 @@
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/t82"
         android:layout_alignStart="@+id/t82"
-        android:id="@+id/t83" />
-
-    <TextView
-        android:text="Section"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/t83"
-        android:layout_alignLeft="@+id/t83"
-        android:layout_alignStart="@+id/t83"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="66dp"
-        android:id="@+id/t84" />
+        android:id="@+id/t83"
+        android:textColor="@android:color/black" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -62,7 +54,8 @@
         android:layout_alignBaseline="@+id/t81"
         android:layout_alignBottom="@+id/t81"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="Enter Name" />
 
     <Spinner
         android:layout_width="200dp"
@@ -70,45 +63,46 @@
         android:layout_alignTop="@+id/t82"
         android:layout_alignLeft="@+id/e81"
         android:layout_alignStart="@+id/e81"
-        android:id="@+id/s81"
+        android:id="@+id/j81"
         android:entries="@array/Item" />
 
     <Spinner
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/s82"
+        android:id="@+id/j82"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/s81"
-        android:layout_alignStart="@+id/s81"
+        android:layout_alignLeft="@+id/j81"
+        android:layout_alignStart="@+id/j81"
         android:entries="@array/Branch" />
 
     <Spinner
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/t84"
-        android:layout_alignLeft="@+id/s82"
-        android:layout_alignStart="@+id/s82"
-        android:id="@+id/s83"
+        android:layout_alignLeft="@+id/j82"
+        android:layout_alignStart="@+id/j82"
+        android:id="@+id/j83"
         android:entries="@array/Section" />
 
     <TextView
         android:text="Roll No."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/s83"
+        android:layout_below="@+id/j83"
         android:layout_alignLeft="@+id/t84"
         android:layout_alignStart="@+id/t84"
         android:layout_marginTop="48dp"
-        android:id="@+id/t85" />
+        android:id="@+id/t85"
+        android:textColor="@android:color/black" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_below="@+id/s83"
-        android:layout_alignLeft="@+id/s83"
-        android:layout_alignStart="@+id/s83"
+        android:layout_below="@+id/j83"
+        android:layout_alignLeft="@+id/j83"
+        android:layout_alignStart="@+id/j83"
         android:layout_marginTop="31dp"
         android:id="@+id/e83" />
 
@@ -119,6 +113,18 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/b81"
-        android:onClick="View_Clicked" />
+        android:onClick="View_Clicked"
+        android:background="@android:color/transparent" />
+
+    <TextView
+        android:text="Section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:id="@+id/t84"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/j82"
+        android:layout_alignLeft="@+id/t83"
+        android:layout_alignStart="@+id/t83" />
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_m1"
     android:layout_width="match_parent"
@@ -8,36 +9,64 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.yashbohara.project.M1">
+    tools:context="com.example.yashbohara.project.M1"
+    android:background="@android:color/background_light">
 
     <Button
         android:text="Admin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="77dp"
-        android:id="@+id/b11"
-        android:onClick="Admin_Clicked" />
+        android:id="@+id/button"
 
-    <Button
-        android:text="Faculty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:onClick="Admin_Clicked"
+        android:textColor="@android:color/black"
+        android:textStyle="bold|italic"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColorLink="@android:color/background_light"
+        android:background="@android:color/transparent"
+        android:textSize="18sp"
         android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/b11"
-        android:layout_alignEnd="@+id/b11"
-        android:id="@+id/b12"
-        android:onClick="Faculty_Clicked" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Student"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/b13"
+        android:onClick="Student_Clicked"
+        android:textStyle="bold|italic"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textAllCaps="false"
+        android:textIsSelectable="false"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="48dp"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/b12"
-        android:layout_alignStart="@+id/b12"
-        android:layout_marginBottom="69dp"
-        android:id="@+id/b13"
-        android:onClick="Student_Clicked" />
+        android:layout_alignStart="@+id/b12" />
+
+    <Button
+        android:text="Faculty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b12"
+        android:textStyle="bold|italic"
+        android:textColor="@android:color/black"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:onClick="Faculty_Clicked"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/button"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_marginTop="47dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/l"
+        android:id="@+id/imageButton4"
+        android:background="@android:color/background_light"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

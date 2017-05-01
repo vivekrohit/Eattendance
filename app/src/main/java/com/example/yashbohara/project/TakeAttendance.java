@@ -40,6 +40,6 @@ public void TakeAttendance_Clicked(View view)
     public void onBackPressed() {
         Intent intent=new Intent(this,Faculty_Functions.class);
         startActivity(intent);
-
+        this.finish();
     }
 }

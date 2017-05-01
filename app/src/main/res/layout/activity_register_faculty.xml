@@ -8,17 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.yashbohara.project.RegisterFaculty">
-
-    <TextView
-        android:text="Unique Id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/t71"
-        android:layout_alignRight="@+id/t71"
-        android:layout_alignEnd="@+id/t71"
-        android:layout_marginTop="87dp"
-        android:id="@+id/t72" />
+    tools:context="com.example.yashbohara.project.RegisterFaculty"
+    android:background="@android:color/background_light">
 
     <TextView
         android:text="Branch"
@@ -28,7 +19,8 @@
         android:layout_alignLeft="@+id/t72"
         android:layout_alignStart="@+id/t72"
         android:layout_marginTop="76dp"
-        android:id="@+id/t73" />
+        android:id="@+id/t73"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,7 +32,8 @@
         android:text="Name"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -82,5 +75,40 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:id="@+id/b71"
-        android:onClick="Register_Clicked" />
+        android:onClick="Register_Clicked"
+        android:background="@android:color/transparent" />
+
+    <TextView
+        android:text="Register Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:id="@+id/textView7"
+        android:layout_above="@+id/b71"
+        android:layout_toLeftOf="@+id/s71"
+        android:layout_toStartOf="@+id/s71"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_alignRight="@+id/s71"
+        android:layout_alignEnd="@+id/s71"
+        android:id="@+id/editText" />
+
+    <TextView
+        android:text="Id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="77dp"
+        android:id="@+id/t72"
+        android:layout_below="@+id/e71"
+        android:layout_alignLeft="@+id/t71"
+        android:layout_alignStart="@+id/t71"
+        android:textColor="@android:color/black" />
 </RelativeLayout>

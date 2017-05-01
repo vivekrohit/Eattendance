@@ -15,7 +15,7 @@
         completions."
     </string>
     <string-array name="Item">
-        <item>1</item>
+        <item><FONT COLOR="#ff000000">1</FONT></item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
@@ -43,9 +43,9 @@
         <item>CS</item>
         <item>IT</item>
         <item>EX</item>
-        <item>MECHANICAL</item>
-        <item>CIVIL</item>
-        <item>AUTOMOBILE</item>
+        <item>ME</item>
+        <item>Ci</item>
+        <item>AU</item>
     </string-array>
 
 </resources>

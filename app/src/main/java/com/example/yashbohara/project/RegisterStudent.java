@@ -26,7 +26,7 @@ public void RegisterClicked(View view)
     Spinner s53=(Spinner) findViewById(R.id.s53);
     dbhandler.AddProduct(s52.getSelectedItem().toString(),s53.getSelectedItem().toString(),s51.getSelectedItem().toString(),e61.getText().toString(),e62.getText().toString());
     Toast.makeText(this,"Added Successfully",Toast.LENGTH_LONG).show();
-    Intent intent=new Intent(this,Admin_Functions.class);
+    Intent intent=new Intent(this,M1.class);
     startActivity(intent);
 }
 }

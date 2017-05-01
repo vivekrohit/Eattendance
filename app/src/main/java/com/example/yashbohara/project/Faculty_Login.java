@@ -34,4 +34,9 @@ public class Faculty_Login extends AppCompatActivity {
     }
 
     }
+    public void RegisterFaculty_Clicked(View view)
+    {
+        Intent intent=new Intent(this,RegisterFaculty.class);
+        startActivity(intent);
+    }
 }
