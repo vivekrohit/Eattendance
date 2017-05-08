@@ -8,7 +8,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.os.health.PackageHealthStats;
 import android.util.Log;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
+
+import static android.content.ContentValues.TAG;
 
 public class Dbhandler extends SQLiteOpenHelper {
     public static final String Name="Name";

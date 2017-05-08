@@ -12,8 +12,8 @@ import java.util.ArrayList;
 
 public class CustomAdapter extends ArrayAdapter<String>{
 
-    public CustomAdapter(Context context, ArrayList<String> list) {
-        super(context, R.layout.row,list);
+    public CustomAdapter(Context context, ArrayList<String> item) {
+        super(context, R.layout.row,item);
     }
 
     @NonNull
