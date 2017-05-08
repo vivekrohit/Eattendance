@@ -75,7 +75,7 @@ ListView l1;
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                // Log.e("helllo world",item.get(1));
-                Log.e("hello",""+dataSnapshot.getValue());
+                Log.e("hello List",""+dataSnapshot.getValue());
                 String a=dataSnapshot.getValue().toString();
                 item.add(a);
             }
