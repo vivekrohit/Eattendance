@@ -10,6 +10,12 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
 import static com.example.yashbohara.project.M1.dbhandler;
@@ -37,18 +43,49 @@ public class CustomAdapter2 extends ArrayAdapter<String> {
             LayoutInflater layoutInflater=LayoutInflater.from(getContext());
             View view=layoutInflater.inflate(R.layout.row2,parent,false);
             String singlelist2=getItem(position).toString();
-            TextView textview=(TextView) view.findViewById(R.id.textView);
-            TextView textview4=(TextView) view.findViewById(R.id.textView4);
-            TextView textview5=(TextView) view.findViewById(R.id.textView5);
-            TextView textview6=(TextView) view.findViewById(R.id.textView6);
-            TextView textview2=(TextView) view.findViewById(R.id.textView2);
-            TextView textview3=(TextView) view.findViewById(R.id.textView3);
+            final TextView textview=(TextView) view.findViewById(R.id.textView);
+        final TextView textview4=(TextView) view.findViewById(R.id.textView4);
+        final TextView textview5=(TextView) view.findViewById(R.id.textView5);
+        final TextView textview6=(TextView) view.findViewById(R.id.textView6);
+        final TextView textview2=(TextView) view.findViewById(R.id.textView2);
+        final TextView textview3=(TextView) view.findViewById(R.id.textView3);
             textview4.setText(singlelist2);
-            textview.setText(dbhandler.Extract(b,c,a,singlelist2,b+a+"01"));
-            textview5.setText(dbhandler.Extract(b,c,a,singlelist2,b+a+"02"));
-            textview6.setText(dbhandler.Extract(b,c,a,singlelist2,b+a+"03"));
-            textview3.setText(dbhandler.Extract(b,c,a,singlelist2,b+a+"04"));
-            textview2.setText(dbhandler.Extract(b,c,a,singlelist2,b+a+"05"));
-            return view;
+            //textview.setText(dbhandler.Extract(b,c,a,singlelist2,b+a+"01"));
+            //textview5.setText(dbhandler.Extract(b,c,a,singlelist2,b+a+"02"));
+            //textview6.setText(dbhandler.Extract(b,c,a,singlelist2,b+a+"03"));
+            //textview3.setText(dbhandler.Extract(b,c,a,singlelist2,b+a+"04"));
+            //textview2.setText(dbhandler.Extract(b,c,a,singlelist2,b+a+"05"));
+        FirebaseDatabase database=FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference=database.getReference("Student"+b+c+a);
+        databaseReference.child(singlelist2).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String p=dataSnapshot.child(b+a+"01").getValue().toString();
+                textview.setText(p);
+                String q=dataSnapshot.child(b+a+"02").getValue().toString();
+                textview5.setText(q);
+                String r=dataSnapshot.child(b+a+"03").getValue().toString();
+                textview6.setText(r);
+                String m=dataSnapshot.child(b+a+"04").getValue().toString();
+                textview3.setText(m);
+                String n=dataSnapshot.child(b+a+"05").getValue().toString();
+                textview2.setText(n);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+        return view;
         }
     }

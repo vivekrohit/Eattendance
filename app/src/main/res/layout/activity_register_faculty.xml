@@ -11,30 +11,6 @@
     tools:context="com.example.yashbohara.project.RegisterFaculty"
     android:background="@android:color/background_light">
 
-    <TextView
-        android:text="Branch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/t72"
-        android:layout_alignLeft="@+id/t72"
-        android:layout_alignStart="@+id/t72"
-        android:layout_marginTop="76dp"
-        android:id="@+id/t73"
-        android:textColor="@android:color/black" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="77dp"
-        android:id="@+id/t71"
-        android:text="Name"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@android:color/black" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -101,14 +77,58 @@
         android:layout_alignEnd="@+id/s71"
         android:id="@+id/editText" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/e2"
+        android:layout_above="@+id/editText"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
+
+    <TextView
+        android:text="Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t1"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_alignBaseline="@+id/e2"
+        android:layout_alignBottom="@+id/e2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Branch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t73"
+        android:textColor="@android:color/black"
+        android:layout_above="@+id/e2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="52dp" />
+
     <TextView
         android:text="Id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="77dp"
+        android:layout_marginTop="73dp"
         android:id="@+id/t72"
+        android:textColor="@android:color/black"
         android:layout_below="@+id/e71"
-        android:layout_alignLeft="@+id/t71"
-        android:layout_alignStart="@+id/t71"
-        android:textColor="@android:color/black" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t71"
+        android:text="Name"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/e71"
+        android:layout_alignBottom="@+id/e71"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

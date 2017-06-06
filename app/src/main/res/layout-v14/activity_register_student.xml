@@ -142,4 +142,26 @@
         android:layout_alignLeft="@+id/t62"
         android:layout_alignStart="@+id/t62" />
 
+    <TextView
+        android:text="Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/b61"
+        android:layout_alignLeft="@+id/t64"
+        android:layout_alignStart="@+id/t64"
+        android:layout_marginBottom="23dp"
+        android:id="@+id/textView19"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_alignBaseline="@+id/textView19"
+        android:layout_alignBottom="@+id/textView19"
+        android:layout_alignLeft="@+id/b61"
+        android:layout_alignStart="@+id/b61" />
+
 </RelativeLayout>

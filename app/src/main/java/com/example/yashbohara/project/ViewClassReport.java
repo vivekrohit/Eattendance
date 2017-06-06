@@ -1,17 +1,28 @@
 package com.example.yashbohara.project;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
 import static com.example.yashbohara.project.M1.dbhandler;
 
 public class ViewClassReport extends AppCompatActivity {
-ListView l2;
+    ListView l2;
+    static int counter2=1;
+    static ArrayList<String> list2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,11 +41,55 @@ ListView l2;
         t10.setText(b+a+"04");
         t11.setText(b+a+"05");
         t12.setText(b+a+"01");
-        ArrayList<String> list2=dbhandler.databaseToString(b,c,a);
+        FirebaseDatabase database=FirebaseDatabase.getInstance();
+        DatabaseReference mref=database.getReference("Student"+b+c+a);
+        //final ArrayList<String> list2=dbhandler.databaseToString(b,c,a);
+        //final ArrayList<String> item=new ArrayList<>();
+        list2=new ArrayList<>();
+        final ProgressDialog progressDialog=new ProgressDialog(this);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setMessage("Loading Please Wait....");
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.show();
+        mref.child("Id").addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                String d=dataSnapshot.getValue().toString();
+                list2.add(d);
+                counter2++;
+                if(counter2>dataSnapshot.getChildrenCount())
+                {
+                    progressDialog.dismiss();
+                    ad();
+                }
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+    public void ad()
+    {
         ListAdapter listAdapter2=new CustomAdapter2(this,list2);
         l2=(ListView) findViewById(R.id.l2);
         l2.setAdapter(listAdapter2);
-//       obj1=new ViewClassReport();
 
     }
 

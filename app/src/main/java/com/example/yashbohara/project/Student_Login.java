@@ -22,4 +22,19 @@ public class Student_Login extends AppCompatActivity {
         Intent intent=new Intent(this,StudentRecord.class);
         startActivity(intent);
     }
+    public void Logout_Clicked(View view)
+    {
+        Intent intent=new Intent(this,activity.class);
+        startActivity(intent);
+    }
+    public void View_Clicked(View view)
+    {
+        Intent intent=new Intent(this,Notice.class);
+        startActivity(intent);
+    }
+    public void ViewAssignment_Clicked(View view)
+    {
+        Intent intent=new Intent(this,ViewAssignment.class);
+        startActivity(intent);
+    }
 }

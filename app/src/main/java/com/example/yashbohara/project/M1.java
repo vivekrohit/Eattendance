@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,6 +26,7 @@ public class M1 extends AppCompatActivity{
     {
         Intent intent1=new Intent(this,Admin_Login.class);
         startActivity(intent1);
+
     }
     public void Faculty_Clicked(View view)
     {
@@ -33,12 +35,13 @@ public class M1 extends AppCompatActivity{
     }
     public void Student_Clicked(View view)
     {
-        Intent intent3=new Intent(this,Student_Login.class);
+        Intent intent3=new Intent(this,register.class);
         startActivity(intent3);
     }
 
         @Override
         public void onBackPressed() {
+            super.onBackPressed();
             this.finish();
 
     }

@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_faculty__functions"
-    android:layout_width="match_parent"
+<ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@android:color/background_light"
-    tools:context="com.example.yashbohara.project.Faculty_Functions">
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:fillViewport="true"
+    style="@android:style/Widget.ScrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:verticalScrollbarPosition="right">
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_faculty__functions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:background="@android:color/background_light"
+        tools:context="com.example.yashbohara.project.Faculty_Functions">
 
     <Button
+        android:scrollbarAlwaysDrawVerticalTrack="true"
         android:text="Upload Assignment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,6 +38,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
+        android:scrollbarAlwaysDrawVerticalTrack="true"
         android:text="View Student Record"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,6 +53,7 @@
         android:layout_alignStart="@+id/b93" />
 
     <Button
+        android:scrollbarAlwaysDrawVerticalTrack="true"
         android:text="Take Attendance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,6 +67,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
+        android:scrollbarAlwaysDrawVerticalTrack="true"
         android:text="View ClassReport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,6 +81,7 @@
         android:layout_alignStart="@+id/b91" />
 
     <ImageButton
+        android:scrollbarAlwaysDrawVerticalTrack="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/l"
@@ -73,4 +89,8 @@
         android:background="@android:color/background_light"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-</RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
+

@@ -14,14 +14,22 @@ public class Admin_Functions extends AppCompatActivity {
     }
 
 
-    public void ViewStudentRecord_Clicked(View view)
+    public void ViewClassReport_Clicked(View view)
     {
-        Intent intent=new Intent(this,StudentRecord.class);
+        Intent intent=new Intent(this,FilterClass.class);
+        this.finish();
+        startActivity(intent);
+    }
+    public void UploadNotice_Clicked(View view)
+    {
+        Intent intent=new Intent(this,Upload.class);
+        this.finish();
         startActivity(intent);
     }
 
-    @Override
+        @Override
     public void onBackPressed() {
+        super.onBackPressed();
         Intent intent=new Intent(this,M1.class);
         startActivity(intent);
         this.finish();

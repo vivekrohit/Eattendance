@@ -20,12 +20,13 @@ public class Faculty_Functions extends AppCompatActivity {
     }
     public void ViewStudentRecord_Clicked(View view)
     {
-        Intent intent=new Intent(this,StudentRecord.class);
+        Intent intent=new Intent(this,StudentRecord1.class);
         startActivity(intent);
     }
     public void UploadAssignment_Clicked(View view)
     {
-
+        Intent intent=new Intent(this,Assignment.class);
+        startActivity(intent);
     }
     public void ViewClassReport_Clicked(View view)
     {

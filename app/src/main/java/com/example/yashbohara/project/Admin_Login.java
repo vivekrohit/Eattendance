@@ -19,11 +19,12 @@ public class Admin_Login extends AppCompatActivity {
     EditText e31=(EditText) findViewById(R.id.e31);
     EditText e32=(EditText) findViewById(R.id.e32);
 
-        if (e31.getText().toString().equals(""))
+        if (e31.getText().toString().equals("Admin"))
             {
-                if (e32.getText().toString().equals(""))
+                if (e32.getText().toString().equals("Password"))
                 {
                     Intent intent = new Intent(this, Admin_Functions.class);
+                    this.finish();
                     startActivity(intent);
                 }
                 else{
@@ -33,5 +34,15 @@ public class Admin_Login extends AppCompatActivity {
         else{
     Toast.makeText(this,"Wrong Id",Toast.LENGTH_LONG).show();
         }
+    }
+    public void UploadNotice_Clicked(View view)
+    {
+        
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finish();
     }
 }

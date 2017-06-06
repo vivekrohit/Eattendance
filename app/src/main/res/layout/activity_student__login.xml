@@ -13,19 +13,6 @@
     tools:context="com.example.yashbohara.project.Student_Login">
 
     <Button
-        android:text="Register Student"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button7"
-        android:onClick="RegisterStudent_Clicked"
-        android:layout_marginBottom="91dp"
-        android:background="@android:color/transparent"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
         android:text="View Student Record"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,5 +34,56 @@
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/button2"
         android:layout_alignStart="@+id/button2" />
+
+    <Button
+        android:text="Register Student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button7"
+        android:onClick="RegisterStudent_Clicked"
+        android:layout_marginBottom="25dp"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_above="@+id/button4"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="View Assignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button9"
+        android:layout_below="@+id/imageButton6"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:onClick="ViewAssignment_Clicked" />
+
+    <Button
+        android:text="View Notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button6"
+        android:layout_marginBottom="24dp"
+        android:onClick="View_Clicked"
+        android:background="@android:color/transparent"
+        android:textSize="18sp"
+        android:layout_above="@+id/button7"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="LogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:id="@+id/button4"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/background_dark"
+        android:onClick="Logout_Clicked"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/button6"
+        android:layout_alignEnd="@+id/button6" />
 
 </RelativeLayout>
